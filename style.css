@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Risque;  
+}
+
+
+
+#content{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/anne-nygard-aHHxZOXWJHc-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+
+.button{
+    width: 220px;
+    height: 49px;
+    color: white;
+    font-family: Risque;
+    font-size: 48px;
+    line-height: 55px;
+    display: flex;
+    justify-content: center;
+}
+.button:hover{
+    border-bottom: 5px solid white;
+    animation: line 1s both;
+}
+
+@keyframes line{
+    0%{
+        border-bottom: none;
+    }
+
+    50%{
+        border-bottom: 2.5px solid white;
+    }
+
+    100%{
+    border-bottom: 5px  solid red;
+    
+}
+}
+
+
+
+header{
+    
+    position: relative;
+}
+
+header img{
+    width: 100%;
+}
+
+header p{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 48px;
+}
+
+
+
+
+header p:hover::after,header p:hover::before {
+    content:"";
+    color:white;
+    animation: per 2s both;
+    
+}
+
+
+@keyframes per{
+    0%{
+    content:"-";
+    color:white;
+    
+    }    
+    50%{
+        content:"--";
+        color:green;
+        } 
+      
+   
+    100%{
+        content:"---";
+        color:red;
+    }
+
+
+}
+
+#tortenet{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBox{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imgBox img{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 20px;
+    box-shadow: 10px 10px 5px rgba(196, 196, 196, 0.788);
+    border-inline: 5px  solid rgba(255, 0, 0, 0.575);
+}
+
+ .textBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(196, 196,196 ,50%);
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(196, 196, 196, 0.788);
+}
+
+
+
+#tortenet section.text{
+    width: 416px;
+    height: 402px;
+    display: flex;
+    flex-direction: column;
+    background-color:unset;
+}
+
+p{
+   margin: 25px; 
+   text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+a button{
+    background-color: red;
+    width: 300px;
+    height: 89px;
+    border-radius: 19px;
+    outline: none;
+    border: none;
+    font-family: Risque;
+    font-size: 20px;
+}
+button:hover{
+    animation: but .5s linear both;
+}
+
+@keyframes but{
+0%{
+    border: none;
+    box-shadow: none;
+}
+
+    100%{border:solid 2px white;
+        box-shadow: 5px 5px 5px black;
+        }
+}
+#recept{
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#recept section li{
+    list-style-image: url(/suti.jpg);
+    ;
+}
+
+#recept,
+#tortenet{
+    margin: 10px 0;
+}
+
+
+@media  (max-width:1110px){
+    #tortenet,
+    #recept,
+    nav{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+
+}
+#tortenet,
+#recept{
+    min-width: 700px;
+}     
+}
+
