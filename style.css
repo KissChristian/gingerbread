@@ -8,7 +8,6 @@
 body{
     font-family: Risque;  
     width: 100vw;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +29,7 @@ header{
     border-radius: 20px;
 }
 
-header p{
+header h1{
     color: white;
     font-size: 48px; 
     order: 1;   
@@ -39,7 +38,7 @@ header p{
 
 
 
-header p:hover::after,header p:hover::before {
+header h1:hover::after,header h1:hover::before {
     content:"";
     color:white;
     animation: per 2s both;
@@ -246,14 +245,21 @@ button:hover{
 
     #recept .textBox{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
-   
+    .hozzavalok{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .hozzavalok p{
+        margin:10px;
+    }
     .imgBox,
     .textBox{
         margin: 0 10px;
-        align-self: stretch;
     }
     .imgBox {
         width: 50%;
