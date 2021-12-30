@@ -7,76 +7,33 @@
 
 body{
     font-family: Risque;  
-}
-
-
-
-#content{
-    
+    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url(/anne-nygard-aHHxZOXWJHc-unsplash.jpg);
     background-position: center;
     background-size: cover;
+    padding: 0 20px;
 }
-nav{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-}
-
-.button{
-    width: 220px;
-    height: 49px;
-    color: white;
-    font-family: Risque;
-    font-size: 48px;
-    line-height: 55px;
-    display: flex;
-    justify-content: center;
-}
-.button:hover{
-    border-bottom: 5px solid white;
-    animation: line 1s both;
-}
-
-@keyframes line{
-    0%{
-        border-bottom: none;
-    }
-
-    50%{
-        border-bottom: 2.5px solid white;
-    }
-
-    100%{
-    border-bottom: 5px  solid red;
-    
-}
-}
-
-
-
 header{
-    
-    position: relative;
-}
-
-header img{
     width: 100%;
+    height: 50vh;
+    background-image: url(isabela-kronemberger-hxOg4o5oNFA-unsplash.jpg);
+    background-size: cover;
+    background-position-x: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
 }
 
 header p{
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
-    font-size: 48px;
+    font-size: 48px; 
+    order: 1;   
 }
 
 
@@ -109,36 +66,87 @@ header p:hover::after,header p:hover::before {
 
 
 }
+nav{
+    width: 50%;
+    display: inline-block;
+    
+    order: 2;
+}
+
+nav div{
+    width: 100%;
+    height: 2rem;
+}
+
+.button{
+    width: 100%;
+    height: 2rem;
+    color: white;
+    font-family: Risque;
+    font-size: 3rem;
+    line-height: 3.4375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px auto;
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+}
+.button:hover{
+    border-bottom: 5px solid white;
+    animation: line 1s both;
+}
+
+@keyframes line{
+    0%{
+        border-bottom: none;
+    }
+
+    50%{
+        border-bottom: 2.5px solid white;
+    }
+
+    100%{
+    border-bottom: 5px  solid red;
+    
+}
+}
+
+
+
+
 
 #tortenet{
-    width: 90%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .imgBox{
-    width: 50%;
     display: flex;
     justify-content: center;
-    
+    margin: 15px 0;
+    width: calc(100% - 40px);
+    border-radius: 50%;
+    border: 1px solid rgba(160, 1, 1, 0.788);;
+    border-inline: 5px  solid rgba(160, 1, 1, 0.644);
+    background: radial-gradient(circle at 100px 100px, rgba(255, 0, 0, 0.918), #fff);
 }
 
 .imgBox img{
-    width: 450px;
-    height: 450px;
+    width: 100%;
+    opacity: 0.5;
     border-radius: 50%;
-    border: 1px solid black;
-    margin-right: 20px;
-    box-shadow: 10px 10px 5px rgba(196, 196, 196, 0.788);
-    border-inline: 5px  solid rgba(255, 0, 0, 0.575);
 }
 
  .textBox{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: rgb(196, 196,196 ,50%);
     border-radius: 20px;
@@ -148,14 +156,12 @@ header p:hover::after,header p:hover::before {
 
 
 #tortenet section.text{
-    width: 416px;
-    height: 402px;
     display: flex;
     flex-direction: column;
     background-color:unset;
 }
 
-p{
+ p{
    margin: 25px; 
    text-align: center;
 }
@@ -164,16 +170,20 @@ h2{
     text-align: center;
     margin-top: 30px;
 }
+a{
+    width: 90%;
+}
 
 a button{
-    background-color: red;
-    width: 300px;
-    height: 89px;
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0.719);
+    width: 100%;
+    height: 30px;
     border-radius: 19px;
-    outline: none;
     border: none;
     font-family: Risque;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 button:hover{
     animation: but .5s linear both;
@@ -184,20 +194,28 @@ button:hover{
     border: none;
     box-shadow: none;
 }
+25%{
+    border:solid 2px green;
+    box-shadow: 5px 3px 5px green;
+}
+50%{
+    border:solid 2px yellow;
+    box-shadow: 5px 4px 5px yellow;
+}
 
-    100%{border:solid 2px white;
-        box-shadow: 5px 5px 5px black;
+    100%{border:solid 2px rgb(8, 100, 238);
+        box-shadow: 5px 5px 5px rgb(8, 100, 238);;
         }
 }
 #recept{
-    width: 90%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
 }
 
 #recept section li{
-    list-style-image: url(/suti.jpg);
+    list-style-type: none;
+    text-align: center
     ;
 }
 
@@ -207,18 +225,38 @@ button:hover{
 }
 
 
-@media  (max-width:1110px){
+@media  (min-width:1024px){
+    header{
+        background-position:center;
+        background-size: cover;
+    }
+    
+    
     #tortenet,
-    #recept,
     nav{
         display: flex;
-        flex-direction:column;
+        flex-direction:row;
         align-items: center;
+    } 
+    #recept{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
 
-}
-#tortenet,
-#recept{
-    min-width: 700px;
-}     
+    #recept .textBox{
+        display: flex;
+        flex-direction: row;
+    }
+
+   
+    .imgBox,
+    .textBox{
+        margin: 0 10px;
+        align-self: stretch;
+    }
+    .imgBox {
+        width: 50%;
+    }
 }
 
